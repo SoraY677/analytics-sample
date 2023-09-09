@@ -26,9 +26,24 @@
         justify-content: center;
         flex-direction: column;
       }
+
+      button {
+        min-width: 12em;
+        min-height: 3em;
+      }
     </style>
     <h1>計測サンプルページ</h1>
-    <p>これはテストのページです！</p>
+    <p>これは計測テストのページです！</p>
+    <button id="count-btn">
+      <span>count</span>
+      <span id="count-num">0</span>
+    </button>
+    <script>
+      document.getElementById('count-btn').addEventListener('click', function() {
+        const countNumElement = document.getElementById('count-num')
+        countNumElement.innerText = parseInt(countNumElement.innerText) + 1
+      })
+    </script>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3WGTZPL"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
